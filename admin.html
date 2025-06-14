@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEET Admin - Upload Results</title>
+    <link href="admin.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="admin-header">
+        <div class="container">
+            <h1><i class="fas fa-shield-alt"></i> NEET Admin Panel</h1>
+            <button class="logout-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="admin-sections">
+                <!-- Upload New Result Section -->
+                <div class="admin-section">
+                    <h2><i class="fas fa-upload"></i> Upload New Result</h2>
+                    <form class="upload-form" id="uploadForm">
+                        <div class="form-group">
+                            <label for="applicationNumber">Application Number:</label>
+                            <input type="text" id="applicationNumber" name="applicationNumber" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="text" id="password" name="password" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="studentName">Student Name:</label>
+                            <input type="text" id="studentName" name="studentName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="resultImage">Result Image:</label>
+                            <input type="file" id="resultImage" name="resultImage" accept="image/*" required>
+                            <div class="file-preview" id="imagePreview"></div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-save"></i> Save Result
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Manage Existing Results Section -->
+                <div class="admin-section">
+                    <h2><i class="fas fa-list"></i> Manage Existing Results</h2>
+                    <div class="results-list" id="resultsList">
+                        <!-- Results will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+/* Header */
+.admit-header {
+    background-color: white;
+    border-bottom: 3px solid #2c5aa0;
+    padding: 0;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: calc(100vh - 300px);
+    padding: 20px 20px;
+}
+
+.login-container {
+    background-color: white;
+    border: 2px solid #1f5582;
+    width: 100%;
+    max-width: 700px;
+    overflow: hidden;
+}
+
+.login-header {
+    background-color: #1f5582;
+    color: white;
+    padding: 12px 0;
+    text-align: center;
+}
+
+.login-header h2 {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.login-form {
+    padding: 30px 50px;
+    background-color: #f8f8f8;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.form-group label {
+    display: block;
+    width: 150px;
+    font-weight: normal;
+    color: #333;
+    font-size: 14px;
+    text-align: right;
+    margin-right: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    flex: 1;
+    max-width: 400px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.captcha-group {
+    display: flex;
+    align-items: center;
+}
+
+.captcha-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    max-width: 400px;
+}
+
+.captcha-container input {
+    width: 150px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.captcha-display {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    min-width: 120px;
+    justify-content: center;
+}
+
+.captcha-text {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4CAF50;
+    letter-spacing: 1px;
+    transition: opacity 0.15s ease;
+}
+
+.refresh-captcha {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #4CAF50;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.login-btn {
+    background-color: #1f5582;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.login-btn:hover {
+    background-color: #164466;
+}
+
+.forgot-password {
+    color: #333;
+    text-decoration: underline;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+.forgot-password:hover {
+    color: #1f5582;
+}
+
+/* Footer */
+.admit-footer {
+    background-color: transparent;
+    padding: 10px 0;
+    margin-top: 40px;
+}
+
+.footer-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        min-height: calc(100vh - 250px);
+        padding: 15px 20px;
+    }
+    
+    .admit-footer {
+        margin-top: 10px;
+    }
+    
+    .login-form {
+        padding: 25px 20px;
+    }
+    
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .form-group label {
+        width: auto;
+        text-align: left;
+        margin-right: 0;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .captcha-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        max-width: none;
+    }
+    
+    .captcha-container input {
+        width: 100%;
+    }
+    
+    .captcha-display {
+        align-self: flex-start;
+    }
+}
