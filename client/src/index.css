@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Fonts */
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+
+  /* Color Palette - Clean, Modern Education Theme */
+  /* Primary: Deep Indigo */
+  --primary: 226 71% 45%; 
+  --primary-foreground: 0 0% 100%;
+  
+  /* Secondary: Soft Slate */
+  --secondary: 220 14% 96%;
+  --secondary-foreground: 222 47% 11%;
+  
+  /* Accent: Vibrant Teal for progress/success */
+  --accent: 173 80% 40%;
+  --accent-foreground: 0 0% 100%;
+
+  /* Backgrounds */
+  --background: 210 20% 98%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  
+  /* UI Elements */
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 226 71% 45%;
+  
+  /* Status */
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+
+  --radius: 0.75rem;
+}
+
+.dark {
+  /* Dark Mode Palette - Deep Blue/Gray */
+  --background: 222 47% 11%;
+  --foreground: 210 40% 98%;
+  
+  --card: 222 47% 13%;
+  --card-foreground: 210 40% 98%;
+  
+  --primary: 226 71% 55%;
+  --primary-foreground: 210 40% 98%;
+  
+  --secondary: 217 19% 27%;
+  --secondary-foreground: 210 40% 98%;
+  
+  --accent: 173 80% 40%;
+  --accent-foreground: 210 40% 98%;
+  
+  --muted: 217 19% 27%;
+  --muted-foreground: 215 20% 65%;
+  
+  --border: 217 19% 27%;
+  --input: 217 19% 27%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased selection:bg-primary/20 selection:text-primary;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/70 dark:bg-black/40 backdrop-blur-xl border border-white/20 dark:border-white/10 shadow-xl;
+  }
+  
+  .container-width {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/20 rounded-full hover:bg-muted-foreground/40 transition-colors;
+}
